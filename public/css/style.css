@@ -2,35 +2,79 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
-    background-image: linear-gradient(rgba(50, 80, 255, 0.5), rgba(50, 80, 100, 0.6)) ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-image: linear-gradient(rgba(50, 80, 255, 0.5), rgba(30,0,160, 0.6)) ;
     min-height: 100vh;
+}
+
+.top-container {
+   
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+
+.middle-container {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    margin: auto;
     
 }
 
+
+.list-container div{
+ background-color: rgba(255,255,255, 0.3);
+ border-bottom: #888888 solid 1px;
+ box-shadow: 1px 0px 1px #444 ;
+ padding: 5px 0px;
+
+} 
+
+.list-container div:last-child{
+    box-shadow:1px 0px 1px #444, 0px 1px 1px #444;
+}
+
+
+
 h1 {
+    margin-top: 100px;
+    display: inline-block;
+    margin-bottom: 50px;
     color: rgba(50, 30, 255, 0.8);
     font-family: Fantasy;
     text-shadow: 1px 0px 1px seashell ;
 }
 
-ol {
-    color: rgba(50, 30, 200, 0.8);
-  
+
+.list-container p {
+    display: inline;
 }
 
-input[type='submit']{
-    background-color: royalblue;
-    border:royalblue solid 1px;
-    padding:0 5px;
-    border-radius: 3px;
-    box-shadow:1px 1px 2px #696868 ;
-    cursor: pointer;
+input[type="checkbox"]:checked + p{
+    text-decoration: line-through;
+    text-decoration-color: ;
 }
 
-input[type='submit']:active{
-    background-color: #4130ff;
+form {
+    margin-top: 50px;
+}
+
+input[type="text"]{
+    background-color: inherit;
+    border: none;
+    border-bottom: #fff solid 1px;
+    padding-left: 2px;
+}
+
+input[type="text"]:focus{
+    outline: none;
+}
+
+input[type="submit"]{
+    background-color: inherit;
+    border-radius: 4px;
+    color:#fff;
+    padding: 4px;
 }

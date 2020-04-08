@@ -7,17 +7,23 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1><%=day%></h1>
-        <ol id="to-do-list">
-            <% for (let i=0; i < toDoList.length; i++) { %>
-                <li><%=toDoList[i]%></li>
-            <% } %>
-        </ol>
-        <form action="/" method="POST">
-        <input name="toDoItem" type="text" required oninvalid="setCustomValidity('请输入您的待办事项吧')">
-        <input type="submit" value="添加">
-        </form>
+    <div class="top-container">
+        <div class="middle-container">
+            <h1><%=day%></h1>
+            <div class="list-container">      
+                    <% for (let i=0; i < toDoList.length; i++) { %>
+                    <div>
+                        <input type="checkbox" name="input" id="">
+                        <p><%=toDoList[i]%></p>
+                    </div>
+                    <% } %>
+            </div>
+            <form action="/" method="POST">
+                <input  name="toDoItem" type="text" autocomplete="off" required>
+                <input type="submit" value="添加">
+                </form>
+        
+        </div>
     </div>
 </body>
 </html>
