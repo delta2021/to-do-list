@@ -1,5 +1,4 @@
-* {
-    margin: 0;
+* {   
     box-sizing: border-box;
 }
 
@@ -8,20 +7,18 @@ body {
     min-height: 100vh;
 }
 
+/* 令middle-container不占据额外的空间, 并且能够通过auto值实现自动居中 */
 .top-container {
-   
-    width: 90%;
-    margin: auto;
     display: flex;
 }
 
+/* 用middle-container包裹h1, list-container和form,使后三者对齐 */
 .middle-container {
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
     margin: auto;
-    
+    width: 350px;
+ 
 }
+
 
 
 .list-container div{
@@ -40,26 +37,31 @@ body {
 
 h1 {
     margin-top: 100px;
-    display: inline-block;
     margin-bottom: 50px;
     color: rgba(50, 30, 255, 0.8);
     font-family: Fantasy;
     text-shadow: 1px 0px 1px seashell ;
+    text-align: center;
 }
 
-
+/* 文字溢出时自动换行 */
 .list-container p {
-    display: inline;
+    display: inline-block;
+    width: 100%;
+    word-wrap: break-word;
 }
 
-input[type="checkbox"]:checked + p{
+
+
+input[type="checkbox"]:checked + span{
     text-decoration: line-through;
-    text-decoration-color: ;
 }
 
-form {
+.form-with-margin {
     margin-top: 50px;
+    text-align: center;
 }
+
 
 input[type="text"]{
     background-color: inherit;
@@ -72,9 +74,20 @@ input[type="text"]:focus{
     outline: none;
 }
 
-input[type="submit"]{
+input[type="checkbox"] {
+    margin: 0;
+    margin-left: 3px;
+    vertical-align: middle;
+}
+
+button[type="submit"]{
     background-color: inherit;
     border-radius: 4px;
     color:#fff;
     padding: 4px;
+}
+
+::placeholder {
+    color: #fff;
+    opacity: 0.3;
 }
